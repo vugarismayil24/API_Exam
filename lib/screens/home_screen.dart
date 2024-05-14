@@ -59,6 +59,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             backgroundColor: todo.completed! ? Colors.green : Colors.red,
                             child: Text(
                               "${todo.id}",
+                              style: const TextStyle(
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                           title: Text(
