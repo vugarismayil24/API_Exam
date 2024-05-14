@@ -1,8 +1,6 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:api_exam/api/todo_api.dart';
 import 'package:flutter/material.dart';
-import 'package:readmore/readmore.dart';
+
 
 import '../model/todo_model.dart';
 
@@ -25,14 +23,14 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Todo List"),
+        title: const Text("Todo List"),
         centerTitle: true,
       ),
       body: FutureBuilder(
         future: getToDoData(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           } else if (snapshot.hasError) {
